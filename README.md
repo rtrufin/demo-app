@@ -1,4 +1,4 @@
-# Project Title
+# Demo
 
 Basic project app with 3rd party public api integration and auth service
 
@@ -31,8 +31,7 @@ $ yarn start
 Will run the front-end app on port 3000
 
 Login with the following credentials:
-"email": "john.doe@auth.com",
-"password": "pass2word"
+john.doe@auth.com / pass2word
 
 Changing the default port in the backend application implies altering the conent of `./basic-app/.env` file.
 
