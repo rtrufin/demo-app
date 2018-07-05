@@ -30,6 +30,10 @@ $ yarn start
 ```
 Will run the front-end app on port 3000
 
+Login with the following credentials:
+"email": "john.doe@auth.com",
+"password": "pass2word"
+
 Changing the default port in the backend application implies altering the conent of `./basic-app/.env` file.
 
 ## Running the tests
@@ -45,3 +49,10 @@ $ yarn test
 $ cd basic-app
 $ yarn test:cov
 ```
+
+
+## TO-DO
+- Increase test coverage (bad behavior: focusing only on delivering),
+- Investigate the unnecessary renders on the forms
+- extend the authentication app (my first endpoint) :D
+- more refactoring on pages
