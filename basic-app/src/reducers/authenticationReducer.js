@@ -1,4 +1,4 @@
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 import storeManager from '../utils/localStorage';
 
 const profile = storeManager.getItem('profile');
@@ -12,14 +12,14 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.FETCH_USER_REQUESTED: {
+    case actionTypes.FETCH_USER_REQUESTED: {
       return {
         ...state,
         isFetching: true,
         error: null,
       };
     }
-    case actions.FETCH_USER_SUCCESS: {
+    case actionTypes.FETCH_USER_SUCCESS: {
       storeManager.setItem('profile', action.user.data);
       return {
         ...state,
@@ -28,14 +28,14 @@ export default (state = initialState, action) => {
         user: action.user.data,
       };
     }
-    case actions.FETCH_USER_FAILURE: {
+    case actionTypes.FETCH_USER_FAILURE: {
       return {
         ...state,
         isFetching: false,
         error: action.error,
       };
     }
-    case actions.INVALIDATE_USER: {
+    case actionTypes.INVALIDATE_USER: {
       storeManager.setItem('profile', null);
 
       return {

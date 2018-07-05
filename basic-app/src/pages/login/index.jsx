@@ -58,20 +58,24 @@ export class Root extends Component {
             <form autoComplete="off">
               <TextField
                 required
+                error={!!this.props.authentication.error}
                 id="emailAddress"
                 label="Email"
                 onChange={this.handleInputChange('email')}
                 autoComplete="email"
                 className="login-input"
+                helperText={!!this.props.authentication.error && 'Invalid user'}
               />
               <TextField
                 required
+                error={!!this.props.authentication.error}
                 id="passwordField"
                 label="Password"
                 type="password"
                 onChange={this.handleInputChange('password')}
                 autoComplete="current-password"
                 className="login-input"
+                helperText={!!this.props.authentication.error && 'Invalid user'}
               />
             </form>
           </CardContent>

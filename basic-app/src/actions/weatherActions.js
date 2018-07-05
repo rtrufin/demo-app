@@ -1,19 +1,19 @@
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 import { GET } from '../utils/http';
 
 import api from '../config/api';
 
 const fetchWeatherData = response => ({
-  type: actions.FETCH_WEATHER_DATA_SUCCESS,
+  type: actionTypes.FETCH_WEATHER_DATA_SUCCESS,
   response,
 });
 
 const fetchWeatherDataStarted = () => ({
-  type: actions.FETCH_WEATHER_DATA_REQUESTED,
+  type: actionTypes.FETCH_WEATHER_DATA_REQUESTED,
 });
 
 const fetchWeatherDataError = error => ({
-  type: actions.FETCH_WEATHER_DATA_FAILURE,
+  type: actionTypes.FETCH_WEATHER_DATA_FAILURE,
   error,
 });
 

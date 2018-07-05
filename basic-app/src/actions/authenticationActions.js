@@ -1,19 +1,19 @@
 import querystring from 'query-string';
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 import { POST } from '../utils/http';
 import api from '../config/api';
 
 const authenticateUser = user => ({
-  type: actions.FETCH_USER_SUCCESS,
+  type: actionTypes.FETCH_USER_SUCCESS,
   user,
 });
 
 const authenticationStarted = () => ({
-  type: actions.FETCH_USER_REQUESTED,
+  type: actionTypes.FETCH_USER_REQUESTED,
 });
 
 const authenticationError = error => ({
-  type: actions.FETCH_USER_FAILURE,
+  type: actionTypes.FETCH_USER_FAILURE,
   error,
 });
 
@@ -36,7 +36,7 @@ export const authenticate = (email, password) => {
 };
 
 export const invalidateUser = () => ({
-  type: actions.INVALIDATE_USER,
+  type: actionTypes.INVALIDATE_USER,
 });
 
 export default {

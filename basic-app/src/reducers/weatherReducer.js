@@ -1,4 +1,4 @@
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
   data: null,
@@ -8,7 +8,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.FETCH_WEATHER_DATA_REQUESTED: {
+    case actionTypes.FETCH_WEATHER_DATA_REQUESTED: {
       return {
         ...state,
         isFetching: true,
@@ -17,14 +17,14 @@ export default (state = initialState, action) => {
 
       };
     }
-    case actions.FETCH_WEATHER_DATA_SUCCESS: {
+    case actionTypes.FETCH_WEATHER_DATA_SUCCESS: {
       return {
         ...state,
         isFetching: false,
         data: action.response,
       };
     }
-    case actions.FETCH_WEATHER_DATA_FAILURE: {
+    case actionTypes.FETCH_WEATHER_DATA_FAILURE: {
       return {
         data: null,
         isFetching: false,

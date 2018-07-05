@@ -1,10 +1,10 @@
 import weatherReducer from './weatherReducer';
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 
 describe('weather reducer', () => {
   it('should handle FETCH_WEATHER_DATA_REQUESTED', () => {
     const fetchStartedAction = {
-      type: actions.FETCH_WEATHER_DATA_REQUESTED,
+      type: actionTypes.FETCH_WEATHER_DATA_REQUESTED,
     };
     expect(weatherReducer({}, fetchStartedAction)).toEqual({
       data: null,
@@ -20,7 +20,7 @@ describe('weather reducer', () => {
       },
     };
     const fetchStartedAction = {
-      type: actions.FETCH_WEATHER_DATA_SUCCESS,
+      type: actionTypes.FETCH_WEATHER_DATA_SUCCESS,
       response: mockResponse,
     };
     expect(weatherReducer({}, fetchStartedAction)).toEqual({

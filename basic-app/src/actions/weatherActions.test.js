@@ -5,7 +5,7 @@ import api from '../config/api';
 
 
 import * as weatherActions from './weatherActions';
-import * as actions from '../constants/actionTypes';
+import * as actionTypes from '../constants/actionTypes';
 
 
 const middlewares = [thunk];
@@ -28,8 +28,8 @@ describe('weather actions', () => {
     });
 
     const expectedActions = [
-      { type: actions.FETCH_WEATHER_DATA_REQUESTED },
-      { type: actions.FETCH_WEATHER_DATA_SUCCESS, response: { data: { temp: 20 } } },
+      { type: actionTypes.FETCH_WEATHER_DATA_REQUESTED },
+      { type: actionTypes.FETCH_WEATHER_DATA_SUCCESS, response: { data: { temp: 20 } } },
     ];
     const store = mockStore({ weather: {} });
 
@@ -49,8 +49,8 @@ describe('weather actions', () => {
     });
 
     const expectedActions = [
-      { type: actions.FETCH_WEATHER_DATA_REQUESTED },
-      { type: actions.FETCH_WEATHER_DATA_FAILURE, error },
+      { type: actionTypes.FETCH_WEATHER_DATA_REQUESTED },
+      { type: actionTypes.FETCH_WEATHER_DATA_FAILURE, error },
     ];
     const store = mockStore({ weather: {} });
 
