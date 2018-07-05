@@ -70,7 +70,6 @@ export class Root extends Component {
                 id="sourceCity"
                 label="City"
                 onChange={this.handleInputChange}
-                value={city}
                 className="weather-city-input"
                 helperText={!!weather.error && 'Invalid location'}
               />
