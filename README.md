@@ -54,5 +54,6 @@ $ yarn test:cov
 ## TO-DO
 - Increase test coverage (bad behavior: focusing only on delivering),
 - Investigate the unnecessary renders on the forms
+- Investigate other solutions for "authentication session". XSS vulnerability
 - extend the authentication app (my first endpoint) :D
 - more refactoring on pages
