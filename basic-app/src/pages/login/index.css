@@ -1,0 +1,12 @@
+.login-container {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.login-input.login-input {
+    width: 100%;
+}
+
+.login-container .login-input:not(:last-of-type) {
+    margin-bottom: 20px;
+}

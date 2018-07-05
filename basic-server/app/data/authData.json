@@ -1,0 +1,20 @@
+[
+    {
+     "name": "John Doe",
+     "password": "pass2word",
+     "email": "john.doe@auth.com",
+     "description": "John - Lorem ipsum dolor amet"
+    },
+    {
+     "name": "Mickey Mouse",
+     "password": "pass2word",
+     "email": "mickey.mouse@auth.com",
+     "description": "Minnie - Lorem ipsum dolor amet"
+    },
+    {
+     "name": "Morgan Freeman",
+     "password": "pass2word",
+     "email": "morgan.freeman@auth.com",
+     "description": "God - Lorem ipsum dolor amet"
+    }
+]

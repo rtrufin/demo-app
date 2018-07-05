@@ -1,0 +1,10 @@
+.weather-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.weather-city-input.weather-city-input {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
