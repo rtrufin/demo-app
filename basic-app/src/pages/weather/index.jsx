@@ -15,6 +15,7 @@ import { equals } from 'ramda';
 import * as weatherActions from '../../actions/weatherActions';
 
 import './index.css';
+import LargeWidget from '../../components/weather/LargeWidget';
 
 export class Root extends Component {
   constructor(props) {
@@ -58,7 +59,7 @@ export class Root extends Component {
               <TextField
                 required
                 error={!!weather.error}
-                id="emailAddress"
+                id="sourceCity"
                 label="City"
                 onChange={this.handleInputChange}
                 value={city}
@@ -81,23 +82,7 @@ export class Root extends Component {
         </Card>
 
         {weather.data
-        && (
-        <Card className="weather-data-container">
-          <CardContent>
-            <Typography variant="headline" component="h2">
-            Weather for
-              {' '}
-              {weather.data.name}
-            </Typography>
-            <Typography variant="headline" component="h2">
-            Temperature:
-              {' '}
-              {weather.data.main.temp}
-              {' '}
-            Celsius
-            </Typography>
-          </CardContent>
-        </Card>
+        && (<LargeWidget weather={weather} />
         )}
       </Paper>
     );
