@@ -1,4 +1,4 @@
-# Project Title
+# Demo
 
 Basic project app with 3rd party public api integration and auth service
 
