@@ -4,10 +4,10 @@ import storeManager from '../utils/localStorage';
 const profile = storeManager.getItem('profile');
 
 const initialState = {
-  isAuthenticated: !!(profile && Object.keys(profile).length > 0),
+  isAuthenticated: !!(profile),
   isFetching: false,
   error: null,
-  user: profile,
+  user: profile || null,
 };
 
 export default (state = initialState, action) => {
@@ -40,6 +40,7 @@ export default (state = initialState, action) => {
 
       return {
         ...initialState,
+        isAuthenticated: false,
         user: null,
       };
     }
