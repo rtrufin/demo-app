@@ -23,10 +23,17 @@ export class Root extends Component {
 
     const { weather } = this.props;
     this.state = {
-      city: '',
       weather,
     };
   }
+
+  shouldComponentUpdate(nextProps) {
+    if (this.props.weather !== nextProps.weather) {
+      return true;
+    }
+    return false;
+  }
+
 
   static getDerivedStateFromProps(props, state) {
     if (!equals(props.weather, state.weather)) {
@@ -36,6 +43,7 @@ export class Root extends Component {
     }
     return null;
   }
+
 
   handleInputChange = (event) => {
     this.setState({ city: event.target.value });

@@ -1,4 +1,4 @@
-import querystring from 'query-string';
+import qs from 'qs';
 import * as actionTypes from '../constants/actionTypes';
 import { POST } from '../utils/http';
 import api from '../config/api';
@@ -25,7 +25,7 @@ export const authenticate = (email, password) => {
 
   return (dispatch) => {
     dispatch(authenticationStarted());
-    return POST(api.AUTHENTICATION, querystring.stringify(data), {
+    return POST(api.AUTHENTICATION, qs.stringify(data), {
       'Content-Type': 'application/x-www-form-urlencoded',
     }).then((response) => {
       dispatch(authenticateUser(response));

@@ -25,6 +25,13 @@ export class Root extends Component {
     };
   }
 
+  shouldComponentUpdate(nextProps) {
+    if (this.props.authentication.isAuthenticated !== nextProps.authentication.isAuthenticated) {
+      return true;
+    }
+    return false;
+  }
+
   static getDerivedStateFromProps(props, state) {
     if (props.authentication.isAuthenticated !== state.isAuthenticated) {
       return {
@@ -47,6 +54,7 @@ export class Root extends Component {
   }
 
   render() {
+    console.log('rendered');
     return (
       <Paper>
         {this.state.isAuthenticated && <Redirect push to="/" />}
